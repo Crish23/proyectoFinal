@@ -183,6 +183,7 @@ public class InterfazEstudiantes extends JFrame {
             String apellido = txtApellido.getText().trim();
             int edad = Integer.parseInt(txtEdad.getText().trim());
             String carrera = txtCarrera.getText().trim();
+            long multa = 0;
 
             if (cedula.isEmpty() || nombre.isEmpty() || apellido.isEmpty() || carrera.isEmpty()) {
                 JOptionPane.showMessageDialog(this, "Todos los campos son obligatorios", "Error", JOptionPane.ERROR_MESSAGE);
@@ -194,7 +195,7 @@ public class InterfazEstudiantes extends JFrame {
                 return;
             }
 
-            Estudiante nuevo = new Estudiante(cedula, nombre, apellido, edad, carrera);
+            Estudiante nuevo = new Estudiante(cedula, nombre, apellido, edad, carrera, multa);
             ControladorEstudiante.agregarEstudiante(nuevo);
             actualizarTabla(ControladorEstudiante.obtenerTodos("estudiantes.dat"));
             limpiarFormulario();
@@ -222,8 +223,9 @@ public class InterfazEstudiantes extends JFrame {
                 JOptionPane.showMessageDialog(this, "No existe un usuario con esta cédula", "Error", JOptionPane.ERROR_MESSAGE);
                 return;
             }
+            long multa = existente.getMulta();
 
-            Estudiante actualizado = new Estudiante(cedula, nombre, apellido, edad, carrera);
+            Estudiante actualizado = new Estudiante(cedula, nombre, apellido, edad, carrera, multa);
             if (ControladorEstudiante.actualizarEstudiante("estudiantes.dat", actualizado)) {
                 actualizarTabla(ControladorEstudiante.obtenerTodos("estudiantes.dat"));
                 limpiarFormulario();

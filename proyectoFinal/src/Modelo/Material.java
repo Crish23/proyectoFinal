@@ -9,20 +9,31 @@ import java.io.Serializable;
 public class Material implements Serializable {
     private static final long serialVersionUID = 1L;
     
+    private String id;
     private String titulo;
     private String autor;
     private long ano;
     private boolean esta;
     
-    public Material(String titulo, String autor, long ano) {
+    public Material(String id, String titulo, String autor, long ano, boolean esta) {
+        this.id = id;
         this.titulo = titulo;
         this.autor = autor;
         this.ano = ano;
+        this.esta = esta;
     }
     
     
     
     // Getters y Setters
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id){
+        this.id = id;
+    }
+    
     public String getTitulo() {
         return titulo;
     }
@@ -46,10 +57,17 @@ public class Material implements Serializable {
         this.ano = ano;
     }
     
+    public boolean getEsta(){
+        return esta;
+    }
+
+    public void setEsta(boolean esta){
+        this.esta = esta;
+    }
     
     @Override
     public String toString() {
-        return "Titulo: " + titulo + ", Autor: " + autor + " " + ", Año: " + ano;
+        return "id" + id + ", Titulo: " + titulo + ", Autor: " + autor + " " + ", Año: " + ano;
     }
 }
 

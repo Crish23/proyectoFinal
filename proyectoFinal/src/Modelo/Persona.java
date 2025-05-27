@@ -9,9 +9,9 @@ public class Persona implements Serializable {
     private String nombre;
     private String apellido;
     private int edad;
-    private int multa;
+    private long multa;
     
-    public Persona(String cedula, String nombre, String apellido, int edad) {
+    public Persona(String cedula, String nombre, String apellido, int edad, long multa) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -25,7 +25,7 @@ public class Persona implements Serializable {
     public String getCedula() {
         return cedula;
     }
-    public void setCedula() {
+    public void setCedula(String cedula) {
         this.cedula = cedula;
     }
     public String getNombre() {
@@ -52,8 +52,12 @@ public class Persona implements Serializable {
         this.edad = edad;
     }
     
-    public void setMulta(int multa){
+    public void setMulta(long multa){
         this.multa = multa;
+    }
+
+    public long getMulta(){
+        return multa;
     }
     
     @Override

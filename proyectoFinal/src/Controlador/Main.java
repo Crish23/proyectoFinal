@@ -1,6 +1,6 @@
 package Controlador;
 
-//import javax.swing.SwingUtilities;
+
 import Vista.Interfaz;
 
 public class Main {

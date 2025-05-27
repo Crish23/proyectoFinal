@@ -4,7 +4,9 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/proyectoFinal/src/Controlador/ControladorMaterial.java</file>
-            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/proyectoFinal/src/Vista/InterfazPersona.java</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/proyectoFinal/src/Controlador/ControladorEstudiante.java</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/proyectoFinal/src/Controlador/Main.java</file>
+            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/proyectoFinal/src/Modelo/Prestamo.java</file>
         </group>
     </open-files>
 </project-private>

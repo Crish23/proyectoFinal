@@ -25,6 +25,7 @@ public class ControladorEstudiante {
             System.out.println("Objeto guardado en: " + nombreArchivo);
         } catch (IOException e) {
             e.printStackTrace();
+            System.out.println("Error al guardar el objeto en: " + nombreArchivo);
         }
     }
 
@@ -42,10 +43,6 @@ public class ControladorEstudiante {
     public static void agregarEstudiante(Persona persona) {
         guardarEstudiantes(persona);
         persona.setMulta(0);
-    }
-
-    public static void agregarMaterial(Material material) {
-        guardarEstudiantes(material);
     }
 
     // Buscar estudiante por cédula
@@ -172,19 +169,19 @@ public class ControladorEstudiante {
         if (obj instanceof Estudiante) {
             return "estudiantes.dat";
         }
-        if (obj instanceof Docente) {
+        else if (obj instanceof Docente) {
             return "docentes.dat";
         }
-        if (obj instanceof Administrativo) {
+        else if (obj instanceof Administrativo) {
             return "administrativos.dat";
         }
-        if (obj instanceof Libro) {
+        else if (obj instanceof Libro) {
             return "libros.dat";
         }
-        if (obj instanceof Revista) {
+        else if (obj instanceof Revista) {
             return "revistas.dat";
         }
-        if (obj instanceof Tesis) {
+        else if (obj instanceof Tesis) {
             return "tesis.dat";
         }
         return "otros.dat";
